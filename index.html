@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Football 2025</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fantasy Football League</h1>
+    </header>
+    <main>
+        <section>
+            <h2>The Reigning Champ</h2>
+                <h3 style="color: gold; text-shadow: 0 0 18px #fff700, 0 2px 12px #d90429; font-size: 2.5rem; text-align: center; font-weight: 900;">BYE WEEK</h3>
+        </section>
+        <section>
+            <h2>League News</h2>
+                <h3>Welcome Back to the 9th Annual Draft</h3>
+                    <p>Hello competitors, this is your commish speaking i'd like to welcome everyone back for the 9th
+                        annual draft. I'd first like to congratulate last years winner, Me, for winning the 2024 season.
+                        Next well get into some rules, were going to be running the same rules as last year, 2 Qb, flex, ppr.
+                        For some breakdown we currently have 8 teams in the league, with 2 maybes. Looking like a competitive year
+                        with only 1 team not having a chance of making the playoffs (Jay). Betting odds are in a bit of a overhype situation
+                        with sean being in second at +600 not sure what vegas is think with that one. Byeweek coming off a championship season
+                        and looking to repeat, so not a suprise with the odds being at +110. The draft is set for August 23rd, 2025 at 1:00 PM.
+                        The draft order is still undecided, but will be finalized before the draft. Good luck.
+                    </p>
+        </section>
+        <section>
+            <h2>Betting Odds</h2>
+                <ul>
+                    <li>Commish: +110</li>
+                    <li>Sean: +600</li>
+                    <li>B Petty: +900</li>
+                    <li>Tuck: +1100</li>
+                    <li>Puma: +1150</li>
+                    <li>Julian: +1500</li>
+                    <li>Brandon D: +2000</li>
+                    <li>Mike: +3500</li>
+                    <li>Jay: +10000</li>
+                    <li>Parker: +15000</li>
+                </ul>
+                    <p>Warning: The league is not responsible for any loses inccured</p>
+        </section>
+        <section>
+            <h2>Draft Day</h2>
+            <div id="countdown"></div>
+            <h3>Draft Order</h3>
+            <ol id="draft-order">
+                undecided
+                <!-- Uncomment the following lines when draft order is finalized -->
+                <!-- <li>Commish</li>
+                <li>Sean</li>
+                <li>B Petty</li>
+                <li>Tuck</li>
+                <li>Puma</li>
+                <li>Julian</li>
+                <li>Brandon D</li>
+                <li>Mike</li>
+                <li>Jay</li>
+                <li>Parker</li> -->
+            </ol>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="container main-footer-container">
+            <a class="ff-name" href="/index">FFL</a>
+            <ul class="nav footer-nav">
+                <li>
+                    <a href="https://www.instagram.com/parkbent/" target="_blank">
+                        <img src="public/images/iglogoV2.webp" alt="Instagram" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://fantasy.espn.com/football/league?leagueId=1166608" target="_blank">
+                        <img src="public/images/espn.webp" alt="ESPN Fantasy" />
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav">
+                <li>
+                    <h4 class="footer-info">Hr email: tuckmon56@comcast.net</h4>
+                </li>
+                <li>
+                    <h4 class="footer-info">Hr phone: 856-994-7455</h4>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        // Set the date and time for the draft (example: August 25, 2025, 7:00 PM)
+        const draftDate = new Date("August 23, 2025 13:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = draftDate - now;
+
+            if (distance < 0) {
+                document.getElementById("countdown").innerHTML = "Draft has started!";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML =
+                days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>

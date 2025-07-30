@@ -1,0 +1,206 @@
+/* Reset some default styles */
+body, h1, h2, h3, h4, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1a2236 0%, #000 100%);
+    color: #fff;
+    min-height: 100vh;
+    letter-spacing: 1px;
+}
+
+header {
+    background: #000;
+    color: #d90429;
+    padding: 2.5rem 0 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 24px #d90429, 0 2px 8px #000;
+    border-bottom: 4px solid #d90429;
+}
+
+header h1 {
+    font-size: 3.2rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    text-shadow: 0 4px 24px #d90429, 0 2px 8px #000;
+    font-weight: 900;
+}
+
+main {
+    max-width: 800px;
+    margin: 2.5rem auto;
+    padding: 2rem;
+    background: rgba(20, 20, 30, 0.98);
+    border-radius: 16px;
+    box-shadow: 0 6px 32px #d9042922, 0 2px 16px #000a;
+    border: 2px solid #d90429;
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+h2 {
+    color: #d90429;
+    margin-bottom: 0.7rem;
+    font-size: 2rem;
+    border-bottom: 3px solid #d90429;
+    padding-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+h3 {
+    color: #fff;
+    margin: 1.2rem 0 0.7rem 0;
+    font-size: 1.3rem;
+    text-shadow: 0 2px 8px #d90429;
+    font-weight: 700;
+}
+
+ul, ol {
+    margin-left: 2rem;
+    margin-bottom: 1.2rem;
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 1px 4px #d90429;
+    text-decoration: none;
+}
+
+#countdown {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+    margin: 2.5rem 0;
+    letter-spacing: 6px;
+    text-align: center;
+    text-shadow:
+        0 2px 16px #d90429,
+        0 0 20px #000,
+        0 0 40px #d90429;
+    background: linear-gradient(90deg, #000 60%, #d90429 100%);
+    border-radius: 16px;
+    padding: 1.5rem 0;
+    box-shadow: 0 8px 32px #d90429cc, 0 2px 8px #000;
+    border: 4px solid #d90429;
+    transition: background 0.3s, color 0.3s;
+    animation: pulse-countdown 0.8s infinite alternate, shake-countdown 2s infinite;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+@keyframes pulse-countdown {
+    0% {
+        box-shadow: 0 8px 32px #d90429cc, 0 2px 8px #000;
+        background: linear-gradient(90deg, #000 60%, #d90429 100%);
+        color: #fff;
+    }
+    100% {
+        box-shadow: 0 0 80px 20px #d90429, 0 2px 8px #000;
+        background: linear-gradient(90deg, #000 40%, #d90429 100%);
+        color: #d90429;
+    }
+}
+
+@keyframes shake-countdown {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+    20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+
+#draft-order {
+    background: #1a2236;
+    border-radius: 10px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 12px #d9042940;
+    border: 2px solid #d90429;
+}
+
+footer.main-footer {
+    background: #000;
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: 2.5rem;
+    border-top: 4px solid #d90429;
+    box-shadow: 0 -4px 24px #d90429, 0 -2px 8px #000;
+}
+
+.container.main-footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ff-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d90429;
+    text-decoration: none;
+    margin-right: 2.5rem;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 8px #fff, 0 0 10px #d90429;
+    text-transform: uppercase;
+}
+
+ul.nav, ul.footer-nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+ul.footer-nav img {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px #d9042940;
+    border: 2px solid #d90429;
+    background: #fff;
+}
+
+ul.footer-nav img:hover {
+    transform: scale(1.15) rotate(-8deg);
+    box-shadow: 0 4px 24px #d90429cc;
+    border-color: #fff;
+}
+
+.footer-info {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-left: 2rem;
+    font-weight: 700;
+    text-shadow: 0 1px 4px #d90429;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 900px) {
+    main {
+        max-width: 98vw;
+        padding: 1rem;
+    }
+    .container.main-footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    .ff-name {
+        margin-bottom: 1rem;
+    }
+}
